@@ -1,0 +1,56 @@
+//without  styling//
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Generator</title>
+    <style>
+        .container {
+            position: absolute;
+            left: 35%;
+            top: 5%;
+        }
+        #results {
+            margin-top: 10px;
+        }
+        #weight-guide {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <form>
+            <p><label>Height in Cm:</label> <input type="number" id="height" required /></p>
+            <p><label>Weight in KG:</label> <input type="number" id="weight" required /></p>
+            <button type="submit">Calculate</button>
+            <div id="results"></div>
+        </form>
+        <div id="weight-guide">
+            <h3>BMI Weight Guide</h3>
+            <p>Underweight = less than 18.6</p>
+            <p>Normal range = 18.6 to 24.9</p>
+            <p>Overweight = greater than 24.9</p>
+        </div>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const height = parseInt(document.querySelector('#height').value);
+            const weight = parseInt(document.querySelector('#weight').value);
+            const result = document.querySelector('#results');
+
+            if (isNaN(height) || height <= 0 || isNaN(weight) || weight <= 0) {
+                result.innerHTML = "Please provide a valid height and weight.";
+            } else {
+                const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+                result.innerHTML = `<span>Your BMI is: ${bmi}</span>`;
+            }
+        });
+    </script>
+</body>
+</html>

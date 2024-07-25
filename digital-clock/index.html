@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="center">
+        <div id="banner"><span>local time</span></div>
+        <div id="clock"></div>
+    </div>
+    <style>
+        .center {
+            height: 100px;
+            width: 250px;
+            border-radius: 10px;
+            background-color: aqua;
+            position: absolute;
+            margin: 15% 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+    </style>
+    
+    <script>
+        const clock = document.getElementById('clock');
+        function updateClock() {
+            let date = new Date();
+            clock.innerHTML = date.toLocaleTimeString();
+        }
+        setInterval(updateClock, 1000); // Use setInterval to keep updating the time every second
+    </script>
+    
+</body>
+</html>

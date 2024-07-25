@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+h1{
+    position: absolute;
+    font-size: 2vw;
+    left: 40%;
+    top:10%;
+}
+#blue{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    left: 25%;
+    top: 20%;
+
+}
+#red{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color:red;
+    left: 35%;
+    top: 20%;
+
+}
+#yellow{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    left: 45%;
+    top: 20%;
+
+}
+#aqua{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    left: 55%;
+    top: 20%;
+
+}

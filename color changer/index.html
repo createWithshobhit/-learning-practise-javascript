@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>color changer</h1>
+    <span class="button" id="blue"></span>
+    <span class="button" id="red"></span>
+    <span class="button" id="yellow"></span>
+    <span class="button" id="aqua"></span>
+</body>
+<script>
+// const buttons = document.querySelectorAll('.button')
+// const body = document.querySelector("body")
+// buttons.forEach(function (button) {
+//     button.addEventListener('click', (e) =>{
+//         if (e.target.id=== 'blue') {
+//             body.style.backgroundColor ="blue"
+//         }
+//         if (e.target.id=== 'red') {
+//             body.style.backgroundColor ="red"
+//         }
+//         if (e.target.id=== 'yellow') {
+//             body.style.backgroundColor ="yellow"
+//         }
+//         if (e.target.id=== 'aqua') {
+//             body.style.backgroundColor ="aqua"
+//         }
+//     })
+// })
+
+//other methods//
+var buttons = document.querySelectorAll('.button')
+var body = document.querySelector("body")
+buttons.forEach(function(button) {
+    button.addEventListener('mouseover',(e)=>{
+        switch (e.target) {
+            case blue:
+                body.style.backgroundColor = 'blue'
+                break;
+                case red:
+                body.style.backgroundColor = 'red'
+                break;
+                case yellow:
+                body.style.backgroundColor = 'yellow'
+                break;
+                case aqua:
+                body.style.backgroundColor = 'aqua'
+                break;
+        }
+    })
+})
+// let buttons = document.querySelectorAll('.button')
+// let body = document.querySelector("body")
+buttons.forEach(function(button) {
+    button.addEventListener('mouseleave',(e)=>{
+        switch (e.target) {
+            case blue:
+                body.style.backgroundColor = 'white'
+                break;
+                case red:
+                body.style.backgroundColor = 'white'
+                break;
+                case yellow:
+                body.style.backgroundColor = 'white'
+                break;
+                case aqua:
+                body.style.backgroundColor = 'white'
+                break;
+        }
+    })
+})
+    
+
+
+
+
+</script>
+</html>
