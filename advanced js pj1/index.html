@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async js</title>
+</head>
+<body>
+    <!-- i am making a card where you get a user info via fetching api -->
+     <div class="card">
+        <img src="" alt="avatar"  style="width: 100%;">
+        <div class="container">
+            <h4>john doe</h4>
+            <p>frontend dev</p>
+        </div>
+     </div>
+     <style>.card{width: 500px; height: 600px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s;}
+        .container{
+            padding: 2px 16px;
+        }
+     </style>
+     <script>
+        const requestUrl = 'https://api.github.com/users/mojombo'
+        const xhr = new XMLHttpRequest()
+         xhr.open('Get',requestUrl)
+        
+        xhr.onreadystatechange = function() {
+           if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            document.querySelector('.card img').setAttribute("src",  data.avatar_url);
+            // document.querySelector('h4').innerHTML = `${data.name}, Followers: ${data.followers}`;
+            // document.querySelector('p').innerHTML = `${data.bio} ${data.blog}`;
+         document.querySelector('h4').innerHTML = `${data.name}, Followers: ${data.followers}`;
+         document.querySelector('p').innerHTML = `${data.bio} ${data.blog}`;
+
+           }
+        };
+         xhr.send()
+       
+
+         
+     </script>
+</body>
+</html>
