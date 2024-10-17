@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>advanced concept of javascript</title>
+</head>
+<body>
+    <div id="page1">
+        <h1>logical And && ,logical OR ||</h1>
+        <p>The && operator returns true if both operands are true, and false otherwise. It's used to check if both conditions are met.</p>
+        <p>The || operator returns true if either of the operands is true, and false otherwise. It's used to check if either of the conditions is met.</p>
+       <script> let a =true;
+                let b =true;  
+                console.log(a&&b);//if a= true,b=true then output here is also true.
+                console.log(a||b);//if a= true,b=true then output here is also true.
+                
+                a = false;
+                b = false;
+                console.log(a&&b);//if a= false,b=false then output here is also false.
+                console.log(a||b);//if a= false,b=false then output here is also false.
+                
+                a = true;
+                b = false;
+                console.log(a&&b);//if a= true,b=false then output here is false.
+                console.log(a||b);//if a= true,b=false then output here is true.
+                
+                a = false;
+                b = true;
+                console.log(a&&b);//if a= false,b=true then output here is false.
+                console.log(a||b);//if a= false,b=true then output here is true.
+        </script>
+    </div>
+<div id="page2">
+    
+</div>
+
+    <script src="index.js"></script>
+</body>
+</html>

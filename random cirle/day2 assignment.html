@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Genrate circle</button>
+
+<style>#btn{ /* Button styles */
+     position: absolute;
+        background-color: #3498db;
+        color: white;
+        padding: 15px 30px;
+        left: 40%;
+        top: 30%;
+        font-size: 16px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        outline: none;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        z-index: 9;
+    }
+    
+    /* Hover effect */
+    #btn:hover {
+        background-color: #2980b9;
+        transform: scale(1.1);
+    }
+    
+    /* Active effect */
+    #btn:active {
+        background-color: #1c598a;
+        transform: scale(0.95);
+    }
+    
+    /* Circle animation */
+    .circle {
+        animation: fadeIn 0.5s ease forwards;
+    }
+    
+    /* Keyframes for the circle fade-in animation */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    }</style>
+    <script src="day2.js"></script>
+</body>
+</html>
+
+
+<!-- user click on a screen create a circle random radius 
+ (max limit 200px)if user click again genrated new circle 
+after twoo click on third click both circle remove and new circle apper -->

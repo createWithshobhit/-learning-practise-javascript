@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hex & RGB Color Generator</title>
+    <style>
+        .color-box {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 18px;
+            color: white;
+            margin-bottom: 20px;
+            border: 2px solid #000;
+        }
+
+        .info {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="color-box" id="colorBox">Color Box</div>
+<div class="info">
+    <p id="hexColor">Hex: #000000</p>
+    <p id="rgbColor">RGB: rgb(0, 0, 0)</p>
+</div>
+<button onclick="generateRandomColor()">Generate Random Color</button>
+
+<script>
+   
+    function generateRandomColor() {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+
+        const hexColor = `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
+        const rgbColor = `rgb(${r}, ${g}, ${b})`;
+
+        const colorBox = document.getElementById('colorBox');
+        const hexDisplay = document.getElementById('hexColor');
+        const rgbDisplay = document.getElementById('rgbColor');
+
+        colorBox.style.backgroundColor = hexColor; 
+        hexDisplay.textContent = `Hex: ${hexColor}`; 
+        rgbDisplay.textContent = `RGB: ${rgbColor}`; 
+    }
+
+   
+    window.onload = generateRandomColor;
+</script>
+
+</body>
+</html>

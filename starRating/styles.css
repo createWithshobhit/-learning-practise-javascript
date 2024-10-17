@@ -1,0 +1,28 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .star-rating {
+    display: inline-block;
+  }
+  
+  .star-rating span {
+    font-size: 40px;
+    cursor: pointer;
+    color: lightgray;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .star-rating span.hovered,
+  .star-rating span.filled {
+    color: gold;
+  }
+  
+  .rating-value {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
